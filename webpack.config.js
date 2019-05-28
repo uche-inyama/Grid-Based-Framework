@@ -4,13 +4,10 @@ module.exports = {
 		filename: './bundle.js'
 	},
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.scss$/,
 				loader: 'style-loader!css-loader!sass-loader'
-			},
-			{
-
 			}
 		]
 		
