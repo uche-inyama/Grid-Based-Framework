@@ -1,0 +1,18 @@
+
+%clearfix:after {
+	display:block;
+	clear:both;
+	content:'';
+}
+
+//----- Grid System
+$grid-spacing:3%;
+$cols: 12;
+
+.row {
+	@extend %clearfix;
+
+	& + & {
+		margin-top:$grid-spacing;
+	}
+}

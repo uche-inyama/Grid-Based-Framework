@@ -1,4 +1,3 @@
-//----- Extends
 %clearfix:after {
 	display:block;
 	clear:both;
@@ -16,6 +15,7 @@ $cols: 12;
 		margin-top:$grid-spacing;
 	}
 }
+//----- Extends
 
 [class^="col-"] {
 	float:left;
