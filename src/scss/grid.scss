@@ -1,3 +1,36 @@
-$color-background: #EEE8D6;
-$color-main: #022933;
-$offwhite: #EEE8D6;
+//----- Extends
+%clearfix:after {
+	display:block;
+	clear:both;
+	content:'';
+}
+
+//----- Grid System
+$grid-spacing:3%;
+$cols: 12;
+
+.row {
+	@extend %clearfix;
+
+	& + & {
+		margin-top:$grid-spacing;
+	}
+}
+
+[class^="col-"] {
+	float:left;
+	margin-right:$grid-spacing;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+
+	&:last-child {
+		margin-right:0%;
+	}
+}
+
+@for $i from 1 through $cols {
+	.col-#{$i}{
+		width: (100%/ ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
+	}
+}
