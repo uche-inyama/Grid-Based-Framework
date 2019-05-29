@@ -5,27 +5,29 @@ $color-btn-orange: $orange;
 $color-btn-purple:$purple;
 
 %btn {
-	display: inline-block;
+	border-radius: 2px 2px;
+	color: $color-btn-text;
 	cursor: pointer;
+	display: inline-block;
+	font-family: $font-main;
+	padding: 8px;
 	text-align: center;
 	white-space: nowrap;
-	font-family: $font-main;
-	color: $color-btn-text;
 }
 
-.btn-orange {
-	@extends %btn;
-	background: $color-btn-orange;
-}
 .btn-blue {
-	@extends %btn;
+	@extend %btn;
 	background: $color-btn-blue;
 }
-.btn-red {
-	@extends %btn;
-	background: $color-btn-red;
+.btn-orange {
+	@extend %btn;
+	background: $color-btn-orange;
+}
+.btn-purple {
+	@extend %btn;
+	background: $color-btn-purple;
 }
 .btn-red {
-	@extends %btn;
-	background: $color-btn-red;
+	@extend %btn;
+	background-color: $color-btn-red;
 }

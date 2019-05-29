@@ -6,6 +6,14 @@
 .row + .row {
   margin-top: 3%; }
 
+.row:after {
+  display: block;
+  clear: both;
+  content: ''; }
+
+.row + .row {
+  margin-top: 3%; }
+
 [class^="col-"] {
   float: left;
   margin-right: 3%;
@@ -51,4 +59,26 @@
 .col-12 {
   width: 100%; }
 
-/*# sourceMappingURL=grid.css.map */
+.btn-blue, .btn-orange, .btn-purple, .btn-red {
+  border-radius: 2px 2px;
+  color: #F9F9F9;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Merriweather", Helvetica, sans-serif;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap; }
+
+.btn-blue {
+  background: #0076A3; }
+
+.btn-orange {
+  background: #F39856; }
+
+.btn-purple {
+  background: #6D73C2; }
+
+.btn-red {
+  background-color: #D14348; }
+
+/*# sourceMappingURL=style.css.map */
