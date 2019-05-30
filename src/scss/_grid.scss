@@ -7,6 +7,10 @@
 //----- Grid System
 $cols: 12;
 $grid-spacing:3%;
+$breakpoint-small: "only screen and (min-width: 0px)";
+$breakpoint-medium: "only screen and (min-width: 768px)";
+$breakpoint-large: "only screen and (min-width: 1008px)";
+$breakpoint-xl: "only screen and (min-width: 1300px)";
 
 .row {
 	@extend %clearfix;
@@ -22,18 +26,35 @@ $grid-spacing:3%;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
+	width: 100%;
 	&:last-child {
 		margin-right:0%;
 	}
 }
 
-@for $i from 1 through $cols {
-	.col-#{$i}{
-		width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
+.container {
+	width: 100%;
+	max-width: 540px;
+	min-width: 320px;
+	margin: 0 auto;
+	padding: 0 1rem;
+	& {
+		@media only screen and (min-width: 576px){
+			max-width: 740px;
+		}
+
+		@media only screen and (min-width: 768px){
+			max-width: 940px;
+		}
+
+		@media only screen and (min-width: 992px){
+			max-width: 1140px;
+		}
 	}
 }
 
-@media #{$breakpoint-small}{
+// #{$breakpoint-small} - xs
+@media only screen and (min-width: 576px){
 		@for $i from 1 through $cols {
 		.col-sm-#{$i}{
 			width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
@@ -41,7 +62,8 @@ $grid-spacing:3%;
 	}
 }
 
-@media #{$breakpoint-medium}{
+// #{$breakpoint-medium} - sm
+@media only screen and (min-width: 768px){
 		@for $i from 1 through $cols {
 		.col-md-#{$i}{
 			width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
@@ -49,7 +71,8 @@ $grid-spacing:3%;
 	}
 }
 
-@media #{$breakpoint-large}{
+// @media #{$breakpoint-large}
+@media only screen and (min-width: 992px){
 		@for $i from 1 through $cols {
 		.col-lg-#{$i}{
 			width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
@@ -57,7 +80,8 @@ $grid-spacing:3%;
 	}
 }
 
-@media #{$breakpoint-xl}{
+// @media #{$breakpoint-xl}
+@media only screen and (min-width: 1200px){
 		@for $i from 1 through $cols {
 		.col-xl-#{$i}{
 			width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
