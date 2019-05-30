@@ -29,6 +29,44 @@ $grid-spacing:3%;
 
 @for $i from 1 through $cols {
 	.col-#{$i}{
-		width: (100%/ ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
+		width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
 	}
 }
+
+@media #{$breakpoint-small}{
+		@for $i from 1 through $cols {
+		.col-sm-#{$i}{
+			width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
+		}
+	}
+}
+
+@media #{$breakpoint-medium}{
+		@for $i from 1 through $cols {
+		.col-md-#{$i}{
+			width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
+		}
+	}
+}
+
+@media #{$breakpoint-large}{
+		@for $i from 1 through $cols {
+		.col-lg-#{$i}{
+			width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
+		}
+	}
+}
+
+@media #{$breakpoint-xl}{
+		@for $i from 1 through $cols {
+		.col-xl-#{$i}{
+			width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
+		}
+	}
+}
+
+
+
+
+
+
