@@ -4,8 +4,14 @@ html {
 
 *,
 *:before,
-*:after {
+*:after,
+body {
   box-sizing: inherit;
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  margin-block-end: 0;
+  margin-block-start: 0;
 }
