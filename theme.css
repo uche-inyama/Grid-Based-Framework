@@ -14,3 +14,11 @@
 	width: 100%;
 	height: auto;
 }
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style: none;
+	align-items: center;
+	width: 60%;
+}
