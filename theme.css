@@ -1,0 +1,16 @@
+.watches, .phones, .Video_Games{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+	padding: 20px;
+}
+
+/*.watches, .phones, .Video_Games img{
+	width: 100%;
+	height: auto;
+}*/
+
+.img-fluid{
+	width: 100%;
+	height: auto;
+}

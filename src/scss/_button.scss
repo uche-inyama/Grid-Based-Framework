@@ -19,6 +19,7 @@ $color-btn-purple:$purple;
 	@extend %btn;
 	background: $color-btn-blue;
 }
+
 .btn-orange {
 	@extend %btn;
 	background: $color-btn-orange;
@@ -26,8 +27,9 @@ $color-btn-purple:$purple;
 .btn-purple {
 	@extend %btn;
 	background: $color-btn-purple;
+
 }
 .btn-red {
 	@extend %btn;
-	background-color: $color-btn-red;
+	// background-color: $color-btn-red;
 }
