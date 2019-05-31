@@ -5,20 +5,20 @@
 	padding: 20px;
 }
 
-/*.watches, .phones, .Video_Games img{
-	width: 100%;
-	height: auto;
-}*/
-
 .img-fluid{
 	width: 100%;
 	height: auto;
 }
-nav ul {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	list-style: none;
-	align-items: center;
-	width: 60%;
+
+.container:nth-child(2){
+	margin-top: 30px;
+}
+.container:nth-child(3){
+	margin-top: 30px;
+}
+h4{
+	font-size: .9rem;
+	font-weight: 400;
+	font-family: "Roboto Condensed", sans-serif;
+
 }

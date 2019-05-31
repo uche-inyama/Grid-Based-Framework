@@ -210,4 +210,36 @@ h1 {
 .btn-purple {
   background: #6D73C2; }
 
+nav {
+  background-color: #F9F9F9; }
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  width: 60%; }
+  nav ul li {
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: "Roboto Condensed", sans-serif; }
+
+footer {
+  background-color: #F9F9F9;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  footer ul {
+    list-style: none; }
+  footer a {
+    text-decoration: none;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: .9rem;
+    font-weight: 400; }
+
 /*# sourceMappingURL=style.css.map */

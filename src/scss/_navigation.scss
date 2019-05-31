@@ -1,0 +1,18 @@
+nav{
+	background-color: $color-backgrounds;
+}
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style: none;
+	align-items: center;
+	width: 60%;
+	& li{
+		font-size: .9rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		cursor: pointer;
+		font-family: "Roboto Condensed", sans-serif;
+	}
+}
