@@ -7,10 +7,19 @@
 //----- Grid System
 $cols: 12;
 $grid-spacing:3%;
-$breakpoint-small: "only screen and (min-width: 0px)";
-$breakpoint-medium: "only screen and (min-width: 768px)";
-$breakpoint-large: "only screen and (min-width: 1008px)";
+$breakpoint-xs: "only screen and (max-width: 575.98px)";
+$breakpoint-sm: "only screen and (min-width: 576px)";
+$breakpoint-md: "only screen and (min-width: 768px)";
+$breakpoint-lg: "only screen and (min-width: 1008px)";
 $breakpoint-xl: "only screen and (min-width: 1300px)";
+
+$breakpoint-prefixes: (
+  $breakpoint-xs: "xs",
+	$breakpoint-sm: "sm",
+	$breakpoint-md: "md",
+	$breakpoint-lg: "lg",
+	$breakpoint-xl: "xl",
+);
 
 .row {
 	@extend %clearfix;
@@ -39,58 +48,27 @@ $breakpoint-xl: "only screen and (min-width: 1300px)";
 	margin: 0 auto;
 	padding: 0 1rem;
 	& {
-		@media only screen and (min-width: 576px){
+		@media #{$breakpoint-sm} {
 			max-width: 740px;
 		}
 
-		@media only screen and (min-width: 768px){
+		@media #{$breakpoint-md} {
 			max-width: 940px;
 		}
 
-		@media only screen and (min-width: 992px){
+		@media #{$breakpoint-lg} {
 			max-width: 1140px;
 		}
 	}
 }
-
-// #{$breakpoint-small} - xs
-@media only screen and (min-width: 576px){
+ 
+// Create the Grid
+@each $name, $value in $breakpoint-prefixes {
+  @media #{$name}{
 		@for $i from 1 through $cols {
-		.col-sm-#{$i}{
-			width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
+			.col-#{$value}-#{$i}{
+				width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
+			}
 		}
 	}
 }
-
-// #{$breakpoint-medium} - sm
-@media only screen and (min-width: 768px){
-		@for $i from 1 through $cols {
-		.col-md-#{$i}{
-			width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
-		}
-	}
-}
-
-// @media #{$breakpoint-large}
-@media only screen and (min-width: 992px){
-		@for $i from 1 through $cols {
-		.col-lg-#{$i}{
-			width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
-		}
-	}
-}
-
-// @media #{$breakpoint-xl}
-@media only screen and (min-width: 1200px){
-		@for $i from 1 through $cols {
-		.col-xl-#{$i}{
-			width: (100% / ($cols/$i)) - (($grid-spacing * ($cols - $i)) /$cols);
-		}
-	}
-}
-
-
-
-
-
-
