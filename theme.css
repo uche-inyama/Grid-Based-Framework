@@ -1,3 +1,8 @@
+body {
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+
 .watches, .phones, .Video_Games{
 	display: flex;
 	justify-content: center;
@@ -44,19 +49,15 @@ h4{
 	margin-right: 0px;
 }
 
-
-@media all (min-width: 1200px){
-	.container .watch-section .watch-stock{
+@media only screen and (min-width: 1200px){
+	.hide-xl {
 		display: none;
 	}
 }
 
-.watch-section .watch-stock{
-	margin-right: 0px;
-}
-
 @media(max-width: 766px){
 	footer ul{
+		font-family: inherit;
 		text-align:center;
 	}
 }
