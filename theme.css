@@ -30,3 +30,33 @@ h4{
 .wrapper{
   padding: 100px 100px;
 }
+
+@media all and (min-width:768px ){
+	.container .row{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+.video-stock, .phone-stock, .watch-stock{
+	margin-right: 0px;
+}
+
+
+@media all (min-width: 1200px){
+	.container .watch-section .watch-stock{
+		display: none;
+	}
+}
+
+.watch-section .watch-stock{
+	margin-right: 0px;
+}
+
+@media(max-width: 766px){
+	footer ul{
+		text-align:center;
+	}
+}

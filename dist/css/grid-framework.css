@@ -227,15 +227,6 @@ nav ul {
     cursor: pointer;
     font-family: "Roboto Condensed", sans-serif; }
 
-@media (max-width: 766px) {
-  .navigation ul {
-    display: none; }
-
-  .navigation i.menu-bar {
-    align-self: center; } }
-@media (min-width: 768px) {
-  .navigation i.menu-bar {
-    display: none; } }
 footer {
   background-color: #F9F9F9;
   width: 100%;
