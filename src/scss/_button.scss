@@ -1,0 +1,35 @@
+$color-btn-text: $color-backgrounds;
+$color-btn-red: $red;
+$color-btn-blue: $blue;
+$color-btn-orange: $orange;
+$color-btn-purple:$purple;
+
+%btn {
+	border-radius: 2px 2px;
+	color: $color-btn-text;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $font-main;
+	padding: 8px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.btn-blue {
+	@extend %btn;
+	background: $color-btn-blue;
+}
+
+.btn-orange {
+	@extend %btn;
+	background: $color-btn-orange;
+}
+.btn-purple {
+	@extend %btn;
+	background: $color-btn-purple;
+
+}
+.btn-red {
+	@extend %btn;
+	// background-color: $color-btn-red;
+}
